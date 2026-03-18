@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-hksb-gold: #C5A059;
+  --color-hksb-navy: #0A1D37;
+  --color-hksb-cream: #F9F7F2;
+}
+
+@layer base {
+  body {
+    @apply bg-hksb-cream text-hksb-navy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium;
+  }
+
+  p {
+    @apply font-sans font-light leading-relaxed;
+  }
+
+  span, label, button, a {
+    @apply font-display;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-hksb-navy/10;
+}
+
+.btn-primary {
+  @apply bg-hksb-navy text-white px-6 py-3 rounded-none hover:bg-hksb-gold transition-all duration-300 font-display text-[10px] uppercase tracking-[0.2em] inline-flex items-center justify-center text-center;
+}
+
+.btn-outline {
+  @apply border border-hksb-navy text-hksb-navy px-6 py-3 rounded-none hover:bg-hksb-navy hover:text-white transition-all duration-300 font-display text-[10px] uppercase tracking-[0.2em] inline-flex items-center justify-center text-center;
+}
+
+.section-label {
+  @apply font-display text-[10px] uppercase tracking-[0.4em] text-hksb-gold mb-4 block;
+}
+
+.card-hover {
+  @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-hksb-navy/5;
+}
